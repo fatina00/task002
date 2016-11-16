@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>todo应用</title>
+		<link href="css/todo.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="top">
+			<h1>ToDo</h1>
+		</div><!--top-->
+		<div class="container">
+				<div class="left">
+					<div id="alltasks">所有任务</div><!--alltasks-->
+					<div id="list-title">分类列表</div>
+					<div id="listcontent">
+						<ul>
+                        <li>
+                            <h2 class="active"><i class="fa fa-folder-open"></i><span>百度IFE项目</span> (2)<i class="fa fa-trash-o"></i>
+                            </h2>
+                            <ul>
+                                <li>
+                                    <h3><i class="fa fa-file-o"></i><span>task1</span> (2)<i class="fa fa-trash-o"></i></h3>
+                                </li>
+                                <li>
+                                    <h3 class="active"><i class="fa fa-file-o"></i><span>task2</span> (2)<i class="fa fa-trash-o"></i></h3>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><h2><i class="fa fa-folder-open"></i><span>默认分类</span> (0)<i class="fa fa-trash-o"></i></h2></li>
+                    </ul>
+					</div><!--listcontent-->
+					<button class="add">新增分类</button>
+				</div><!--left-->
+				<div class="mid">
+					<div class="status">
+						<button id="alltask" class="active">所有</button>
+						<button id="unfinish">未完成</button>
+						<button id="finished">已完成</button>
+					</div><!--status-->
+					<div id="task-list" class="task-list">
+						<div>2016-11-16</div>
+						<ul>
+							<li>todo-1</li>
+							<li>todo-2</li>
+						</ul>
+						<div>2016-11-16</div>
+						<ul>
+							<li>todo-1</li>
+							<li>todo-2</li>
+						</ul>
+					</div><!--task-list-->
+					<button class="add-task add">新增任务</button>
+				</div><!--mid-->
+				<div class="right">
+		                <div class="title">
+		                    <div class="todo-name">todo-1</div><!--todo-name-->
+		                    <div class="manipulate">
+		                        <a><i class="fa fa-check-square-o"></i></a>
+		                        <a><i class="fa fa-pencil-square-o"></i></a>
+		                    </div><!--manipulate-->
+		                </div><!--title-->
+		                <div class="task-date">
+		                	任务日期：<span>2015-06-05</span>
+		                </div><!--task-date-->
+		                <div class="content-w">
+		                    finish task 3啊啊啊啊啊这个是假的
+		                </div><!--content-w-->
+		                <div class="button-area">
+		                </div><!--button-area-->
+		        </div><!--right-->
+		</div><!--container-->
+		<div class="cover">
+            <div class="modal">
+                <div class="modal-head">
+                   	 新增分类
+                </div><!--modal-head-->
+                <div class="modal-body">选择主分类：
+                	<select id="modal-select">
+                        <option value="volvo">Volvo</option><!--volvo-->
+                    </select><!--modal-select-->
+                    <br>
+                    	新分类名称：
+                    	<input id="newCateName" type="text">
+                </div><!--modal-body-->
+                <div class="modal-foot">
+                    <button onclick="cancel()">取消</button>
+                    <button onclick="ok()">确认</button>
+                </div><!--modal-foot-->
+            </div><!--modal-->
+        </div><!--cover-->
+      	<script src="js/util.js"></script>
+        <script src="js/todo.js"></script>
+	</body>
+</html>
