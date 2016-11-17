@@ -11,9 +11,11 @@
 		</div><!--top-->
 		<div class="container">
 				<div class="left">
-					<div id="alltasks">所有任务</div><!--alltasks-->
-					<div id="list-title">分类列表</div>
-					<div id="listcontent">
+					<div id="alltasks" cateid="-1" class="list-title all-tasks active" onclick="clickCate(this)">
+						所有任务
+					</div><!--alltasks-->
+					<div class="list-title">分类列表</div>
+					<div id="listcontent" class="list">
 						<ul>
                         <li>
                             <h2 class="active"><i class="fa fa-folder-open"></i><span>百度IFE项目</span> (2)<i class="fa fa-trash-o"></i>
@@ -34,15 +36,15 @@
 				</div><!--left-->
 				<div class="mid">
 					<div class="status">
-						<button id="alltask" class="active">所有</button>
-						<button id="unfinish">未完成</button>
-						<button id="finished">已完成</button>
+						<button id="all-tasks" class="active">所有</button>
+						<button id="unfinish-tasks">未完成</button>
+						<button id="finished-tasks">已完成</button>
 					</div><!--status-->
 					<div id="task-list" class="task-list">
 						<div>2016-11-16</div>
 						<ul>
-							<li>todo-1</li>
-							<li>todo-2</li>
+							<li taskid="1" class="active">todo-1</li>
+							<li taskid="2">todo-2</li>
 						</ul>
 						<div>2016-11-16</div>
 						<ul>
@@ -50,7 +52,7 @@
 							<li>todo-2</li>
 						</ul>
 					</div><!--task-list-->
-					<button class="add-task add">新增任务</button>
+					<button class="add-task add" onclick="clickAddTask()"><i class="fa fa-plus"></i>新增任务</button>
 				</div><!--mid-->
 				<div class="right">
 		                <div class="title">
@@ -64,9 +66,22 @@
 		                	任务日期：<span>2015-06-05</span>
 		                </div><!--task-date-->
 		                <div class="content-w">
-		                    finish task 3啊啊啊啊啊这个是假的
+		                    finish task 3
 		                </div><!--content-w-->
+		                 <!--  <div class="title">
+                    <div class="todo-name"><input type="text" class="input-title" placeholder="请输入标题"></div>
+                    <div class="manipulate"></div>
+                </div>
+                <div class="task-date">
+                    任务日期：<span><input type="date" class="input-date"></span>
+                </div>
+                <div class="content">
+                    <textarea class="textarea-content" placeholder="请输入任务内容"></textarea>
+                </div> -->
 		                <div class="button-area">
+				            <!-- <span class="info"></span>
+		                    <button class="save">保存</button>
+		                    <button class="cancel-save">放弃</button> -->
 		                </div><!--button-area-->
 		        </div><!--right-->
 		</div><!--container-->
